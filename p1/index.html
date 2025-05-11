@@ -1,29 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css"/>
-</head>
-<body>
-   <header>
-    <div><h1>Shivani</h1></div>
-    <div>
-        <ul>
-            <li><a  href="#home">Home</a></li>
-            <li><a  href="#projects">Projects</a></li>
-            <li><a  href="#services">Services</a></li>
-            <li><a  href="#about">About</a></li>
-            <li><a  href="#contact">Contact</a></li>
-        </ul>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Shivani Bajjuri</h1>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <section id="home">
+                    <div class="row">
+                        <div class="box">
+                            <h1 class="title">MERN Stack Developer</h1><br>
+                            <p id="para">Enthusiastic MERN Stack Developer committed to crafting dynamic full-stack web applications using the power of MongoDB, Express, React, and Node.js. With a passion for innovative solutions and user-centered design, I thrive on transforming ideas into seamless digital experiences.</p><br>
+                            <button>Dive in</button>
+                        </div>
+                        <div class="box">
+                            <img src="pic.png" alt="image" width="300" height="200">
+                        </div>
+                    </div>
+            </section>
+
+              <section id="projects">
+  <h2 class="projects-heading">Projects</h2>
+  <div class="projects-container">
+    <div class="project-card">
+      <h3>Project 1</h3>
+      <p>Description of project 1.</p>
+      <button class="demo-button">View Demo</button>
     </div>
-   </header>
-   <main>
+    <div class="project-card">
+      <h3>Project 2</h3>
+      <p>Description of project 2.</p>
+      <button class="demo-button">View Demo</button>
+    </div>
+    <div class="project-card">
+      <h3>Project 3</h3>
+      <p>Description of project 3.</p>
+      <button class="demo-button">View Demo</button>
+    </div>
+  </div>
+</section>
 
-   </main>
-   <footer>
 
-   </footer>
-</body>
+            <section id="services">
+    <h2 class="section-heading">Services</h2>
+    <div class="services-container">
+        <div class="service-card">
+            <h3>Web Development</h3>
+            <p>Build responsive and dynamic websites using the MERN stack.</p>
+        </div>
+        <div class="service-card">
+            <h3>API Integration</h3>
+            <p>Seamlessly integrate third-party APIs for enhanced functionality.</p>
+        </div>
+        <div class="service-card">
+            <h3>UI/UX Design</h3>
+            <p>Create intuitive user interfaces and engaging experiences.</p>
+        </div>
+    </div>
+</section>
+<section id="about">
+    <h2 class="section-heading">A Little About Me</h2>
+    <div class="about-container">
+        <p>Hi! I'm Shivani, a MERN Stack Developer who enjoys building clean, user-friendly web applications. I love working with modern tech like MongoDB, Express, React, and Node.js to bring ideas to life. I'm always curious, always learning, and genuinely enjoy the process of turning challenges into simple, effective solutions.</p>
+    </div>
+</section>
+<section id="contact">
+    <h2 class="section-heading">Contact</h2>
+    <div class="contact-container">
+    <div class="contact-form">
+        <div class="contact-details">
+            <p><b>Name: Shivani Bajjuri</b></p>
+            <p><b>Email ID: bajjuri0405@gmail.com</b></p>
+            <p><b></b>Phone No: 9876543210</b></p>
+        </div>
+        <button type="submit">Send Message</button>
+    </div>
+</div>
+</section>
+      </main>
+
+      <footer></footer>
+    </div>
+  </body>
 </html>
