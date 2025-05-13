@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Animated Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 300px;
+      margin: 100px auto;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+
+    input, button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    input:nth-of-type(1) {
+      animation-delay: 0.2s;
+    }
+
+    input:nth-of-type(2) {
+      animation-delay: 0.4s;
+    }
+
+    button {
+      animation-delay: 0.6s;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Validation styles */
+    input:invalid {
+      border-color: red;
+    }
+
+    input:valid {
+      border-color: green;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <input type="email" placeholder="Enter email" required>
+    <input type="password" placeholder="Enter password" required>
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>
