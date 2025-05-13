@@ -7,6 +7,17 @@ body {
   font-family: Georgia, serif;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 #top-container {
   width: 100%;
   overflow-x: auto;
@@ -24,11 +35,18 @@ body {
   padding: 0 10px;
   box-shadow: 0 2px 5px rgba(181, 6, 6, 0.1);
   z-index: 999;
+  transition: box-shadow 0.3s ease;
 }
 
 .logo {
   height: 47px;
   margin-left: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(60, 176, 67, 0.3);
 }
 
 .cart {
@@ -39,6 +57,11 @@ body {
   cursor: pointer;
   color: black;
   margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+.cart:hover {
+  color: #3cb043;
 }
 
 .cart-icon {
@@ -46,7 +69,6 @@ body {
   height: 22px;
   margin-right: 8px;
 }
-
 
 .name {
   font-weight: bold;
@@ -73,13 +95,20 @@ body {
 .s input {
   margin-right: 5px;
   padding: 6px;
+  transition: all 0.3s ease;
+}
+
+.s select:focus,
+.s input:focus {
+  outline: none;
+  border: 1px solid #3cb043;
+  box-shadow: 0 0 4px rgba(60, 176, 67, 0.3);
 }
 
 .sup,
 .cart {
   text-align: right;
 }
-
 
 .products {
   display: flex;
@@ -99,6 +128,14 @@ body {
   text-align: center;
   border-radius: 6px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.product-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .product-card img {
@@ -106,14 +143,41 @@ body {
   height: 150px;
   object-fit: cover;
   border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.product-card img:hover {
+  transform: scale(1.05);
 }
 
 .p-name {
   font-weight: bold;
   margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.p-name:hover {
+  color: #3cb043;
 }
 
 .price {
   color: green;
   margin-top: 5px;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.price:hover {
+  transform: scale(1.1);
+}
+
+.add-cart {
+  margin-top: 15px; /* Increased from 10px for more space */
+  background-color: #3cb043;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
