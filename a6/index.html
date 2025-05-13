@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Simple Animated Form</title>
+  <title>Form</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -39,13 +39,21 @@
       cursor: pointer;
     }
 
-    /* Validation styles */
+    
     input:invalid {
-      border-color: red;
+      border-color: rgba(255, 51, 0, 0.71);
     }
 
     input:valid {
-      border-color: green;
+      border-color: rgb(0, 128, 19);
+    }
+
+    #output {
+      margin-top: 20px;
+      opacity: 0;
+      color: #333;
+      font-weight: bold;
+      animation: fadeIn 1s forwards;
     }
 
     @keyframes fadeIn {
@@ -62,11 +70,24 @@
 </head>
 <body>
 
-  <form>
-    <input type="email" placeholder="Enter email" required>
-    <input type="password" placeholder="Enter password" required>
-    <button type="submit">Submit</button>
+  <form onsubmit="event.preventDefault();">
+    <input type="email" placeholder="Enter email" required id="email">
+    <input type="password" placeholder="Enter password" required id="password">
+    <button type="submit" onclick="displayInfo()">Submit</button>
   </form>
+
+  <div id="output"></div>
+
+  <script>
+    function displayInfo() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      const output = document.getElementById('output');
+      output.textContent = `Email: ${email} , Password: ${password}`;
+      output.style.opacity = 1; // Show the output
+    }
+  </script>
 
 </body>
 </html>
