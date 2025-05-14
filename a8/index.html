@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 36px;
+    }
+    input {
+      display: block;
+      margin-bottom: 10px;
+      padding: 5px;
+      font-size: 16px;
+    }
+    button {
+      margin: 5px 5px 15px 0;
+      padding: 8px 12px;
+      font-size: 16px;
+    }
+    hr {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Calculator</h1>
+
+  <input type="number" id="num1" placeholder="Enter first number">
+  <input type="number" id="num2" placeholder="Enter second number">
+
+  <button onclick="Addition()">+</button>
+  <button onclick="Subtraction()">-</button>
+  <button onclick="Multiplication()">x</button>
+  <button onclick="Division()">÷</button>
+
+  <hr>
+  <div id="result"></div>
+
+  <script>
+    const getValues = () => {
+      const num1 = parseFloat(document.getElementById('num1').value);
+      const num2 = parseFloat(document.getElementById('num2').value);
+      return { num1, num2 };
+    };
+
+    const Addition = () => {
+      const { num1, num2 } = getValues();
+      document.getElementById('result').textContent = `Addition: ${num1 + num2}`;
+    };
+
+    const Subtraction = () => {
+      const { num1, num2 } = getValues();
+      document.getElementById('result').textContent = `Subtraction: ${num1 - num2}`;
+    };
+
+    const Multiplication = () => {
+      const { num1, num2 } = getValues();
+      document.getElementById('result').textContent = `Multiplication: ${num1 * num2}`;
+    };
+
+    const Division = () => {
+      const { num1, num2 } = getValues();
+      if (num2 === 0) {
+        document.getElementById('result').textContent = 'Division by zero is not allowed.';
+      } else {
+        document.getElementById('result').textContent = `Division: ${num1 / num2}`;
+      }
+    };
+  </script>
+
+</body>
+</html>
