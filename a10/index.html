@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Premium Fruit Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to right, #f0f8ff, #e6f0ff);
+    }
+
+    header {
+      font-family: 'Pacifico', cursive;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: white;
+      text-align: center;
+      padding: 30px;
+      font-size: 2.8em;
+      letter-spacing: 1px;
+    }
+
+    .form-section {
+      text-align: center;
+      padding: 25px;
+      background-color: #e3f2fd;
+    }
+
+    .form-section input {
+      padding: 10px;
+      margin: 6px;
+      width: 230px;
+      border: 1px solid #b0bec5;
+      border-radius: 8px;
+      font-size: 1em;
+      background-color: #ffffff;
+    }
+
+    .form-section button {
+      padding: 10px 24px;
+      background-color: #00bcd4;
+      border: none;
+      color: white;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .form-section button:hover {
+      background-color: #008c9e;
+    }
+
+    .fruit-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 30px 20px;
+    }
+
+    .fruit-card {
+      background-color: white;
+      border-radius: 14px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      width: 230px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .fruit-card:hover {
+      transform: scale(1.06);
+    }
+
+    .fruit-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .fruit-card .info {
+      padding: 16px;
+      text-align: center;
+    }
+
+    .fruit-card .name {
+      font-size: 1.3em;
+      color: #00796b;
+      margin-bottom: 8px;
+    }
+
+    .fruit-card .price {
+      font-size: 1em;
+      color: #ef6c00;
+      font-weight: bold;
+    }
+
+    .delete-btn {
+      margin-top: 10px;
+      background-color: #ff5252;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9em;
+      transition: background-color 0.3s;
+    }
+
+    .delete-btn:hover {
+      background-color: #d32f2f;
+    }
+
+    footer {
+      background-color: #00bcd4;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      font-family: 'Quicksand', sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Premium Fruit Shop</header>
+
+  <div class="form-section">
+    <input type="text" id="fruitName" placeholder="Fruit name">
+    <input type="text" id="fruitURL" placeholder="Image URL">
+    <button onclick="addFruit()">Add Fruit</button>
+  </div>
+
+  <div class="fruit-list" id="fruitContainer"></div>
+
+  <footer>
+    &copy; 2025 Premium Fruit Shop. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
