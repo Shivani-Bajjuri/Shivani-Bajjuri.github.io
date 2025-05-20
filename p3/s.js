@@ -57,4 +57,5 @@ const showProducts = () => {
     `;
   });
   root.innerHTML = "<div class='row'>" + str + "</div>";
+  
 };

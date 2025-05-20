@@ -38,6 +38,7 @@ header li:hover {
 }
 
 .row {
+  
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
