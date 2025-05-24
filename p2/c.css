@@ -1,47 +1,173 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: rgb(24, 214, 144);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #eee;
 }
 
 .atm-box, .welcome-box {
-  background-color: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  width: 300px;
+    background: #1e1e1e;
+    border-radius: 16px;
+    padding: 40px 30px;
+    width: 360px;
+    box-shadow:
+        6px 6px 15px #141414,
+        -6px -6px 15px #292929;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.4s ease;
 }
 
-input {
-  width: 90%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
+.atm-box:hover, .welcome-box:hover {
+    box-shadow:
+        8px 8px 20px #121212,
+        -8px -8px 20px #2e2e2e;
+}
+
+h1, h2 {
+    margin: 0 0 20px 0;
+    font-weight: 700;
+    color: #f0c808;
+    text-shadow: 0 0 10px #f0c80899;
+}
+
+.balance-text {
+    font-size: 20px;
+    color: #a2d729;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+input, select {
+    width: 100%;
+    padding: 14px 18px;
+    margin: 12px 0;
+    border-radius: 12px;
+    border: none;
+    background: #292929;
+    color: #eee;
+    font-size: 16px;
+    box-shadow:
+        inset 4px 4px 8px #1a1a1a,
+        inset -4px -4px 8px #353535;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+input::placeholder, select option {
+    color: #bbb;
+}
+
+input:focus, select:focus {
+    outline: none;
+    background: #333333;
+    box-shadow:
+        inset 6px 6px 12px #141414,
+        inset -6px -6px 12px #474747;
+    color: #f0c808;
 }
 
 button {
-  padding: 10px 20px;
-  background-color: rgb(24, 214, 144);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border-radius: 14px;
+    border: none;
+    font-weight: 700;
+    font-size: 17px;
+    cursor: pointer;
+    color: #121212;
+    background: #f0c808;
+    box-shadow:
+        4px 4px 8px #c9a806,
+        -4px -4px 8px #fff761;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-  background-color: rgb(48, 91, 50);
+    background: #e6b807;
+    box-shadow:
+        6px 6px 12px #b49404,
+        -6px -6px 12px #fff045;
+    transform: translateY(-3px);
+}
+
+.logout-btn {
+    background: #ff5252;
+    color: #fff;
+    box-shadow:
+        4px 4px 8px #b33737,
+        -4px -4px 8px #ff7b7b;
+    margin-top: 24px;
+}
+
+.logout-btn:hover {
+    background: #d84242;
+    box-shadow:
+        6px 6px 12px #8b2a2a,
+        -6px -6px 12px #ff5c5c;
+    transform: translateY(-3px);
 }
 
 #errorMsg {
-  color: rgba(230, 54, 54, 0.539);
-  margin-top: 10px;
+    color: #ff6b6b;
+    font-size: 14px;
+    margin-top: 8px;
+    font-weight: 600;
+    text-shadow: 0 0 3px #ff6b6b99;
+}
+
+.transaction-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.transaction {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+}
+
+#amountField, #transferField {
+    width: 100% !important;
+    padding-right: 10%;
+}
+
+.transaction-section input[type="number"]::-webkit-inner-spin-button,
+.transaction-section input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+select {
+    cursor: pointer;
+}
+
+select:hover {
+    background: #3a3a3a;
+}
+
+select:focus {
+    background: #444;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
 }
